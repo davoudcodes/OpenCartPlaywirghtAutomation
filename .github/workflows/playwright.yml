@@ -16,8 +16,7 @@ jobs:
       options: --user 1001
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
 
       - name: Install dependencies
         run: |
@@ -25,6 +24,6 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install chromium firefox webkit
 
-      - name: Run Playwright tests
+      - name: Run tests
         run: |
-          pytest tests
+          python -m pytest tests
