@@ -77,6 +77,9 @@ def test_valid_user_login(page):
 
     expect(my_account_page.get_my_account_page_heading()).to_be_visible(timeout=3000)
 
+    s = "one,two,three"
+    print(type(s))
+
 
 
 
